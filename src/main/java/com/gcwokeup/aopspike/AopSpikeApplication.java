@@ -1,22 +1,29 @@
 package com.gcwokeup.aopspike;
 
-import com.gcwokeup.aopspike.Components.EmployeeManager;
-import com.gcwokeup.aopspike.DTOs.EmployeeDTO;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class AopSpikeApplication {
 
-  @SuppressWarnings("resource")
+
   public static void main(String[] args) {
+    SpringApplication.run(AopSpikeApplication.class, args);
+  }
 
-    EmployeeManager manager = new EmployeeManager();
+  @Bean
+  public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+    return args -> {
+      ManagerInterface manager = ctx.getBean(ManagerInterface.class);
 
-    manager.getEmployeeById(1);
-    manager.createEmployee(new EmployeeDTO());
+      manager.getEmployeeById(1);
+      manager.createEmployee(new EmployeeDTO());
+
+
+    };
   }
 
 }

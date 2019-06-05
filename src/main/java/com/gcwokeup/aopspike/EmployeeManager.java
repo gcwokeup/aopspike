@@ -1,12 +1,11 @@
-package com.gcwokeup.aopspike.Components;
+package com.gcwokeup.aopspike;
 
-import com.gcwokeup.aopspike.DTOs.EmployeeDTO;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmployeeManager {
+public class EmployeeManager implements ManagerInterface {
   public EmployeeDTO getEmployeeById(Integer employeeId) {
     System.out.println("Method getEmployeeById() called");
     return new EmployeeDTO();

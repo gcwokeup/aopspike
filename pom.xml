@@ -24,75 +24,16 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
     <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
-    <dependency>
-      <groupId>org.aspectj</groupId>
-      <artifactId>aspectjweaver</artifactId>
-      <version>1.9.4</version>
-    </dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-rest</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-rest-hal-browser</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.restdocs</groupId>
-			<artifactId>spring-restdocs-mockmvc</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.asciidoctor</groupId>
-				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>1.5.3</version>
-				<executions>
-					<execution>
-						<id>generate-docs</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>process-asciidoc</goal>
-						</goals>
-						<configuration>
-							<backend>html</backend>
-							<doctype>book</doctype>
-						</configuration>
-					</execution>
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>org.springframework.restdocs</groupId>
-						<artifactId>spring-restdocs-asciidoctor</artifactId>
-						<version>${spring-restdocs.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
