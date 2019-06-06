@@ -22,7 +22,6 @@ public class AopSpikeApplication {
       manager.getEmployeeById(1);
       manager.createEmployee(new EmployeeDTO());
 
-
     };
   }
 
