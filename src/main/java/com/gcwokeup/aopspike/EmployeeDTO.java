@@ -6,6 +6,7 @@ public class EmployeeDTO {
   public String firstName;
   public String lastName;
 
+  @CustomAnnotation
   public Integer getId() {
     return id;
   }
@@ -14,6 +15,7 @@ public class EmployeeDTO {
     this.id = id;
   }
 
+  @CustomAnnotation
   public String getFirstName() {
     return firstName;
   }
@@ -22,6 +24,7 @@ public class EmployeeDTO {
     this.firstName = firstName;
   }
 
+  @CustomAnnotation
   public String getLastName() {
     return lastName;
   }
